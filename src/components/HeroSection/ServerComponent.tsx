@@ -4,7 +4,7 @@ export const heading1 = (
   <>
     <h1 className="font-heading mb-6">Explore Our Exquisite Hotel</h1>
 
-    <p className="text-[#4a4a4a] dark:text-[#ffffea] mb-12 max-w-lg">
+    <p className="text-[#4a4a4a] dark:text-[#ffffffea] mb-12 max-w-lg">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
     </p>
 
