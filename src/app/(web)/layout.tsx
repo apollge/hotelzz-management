@@ -1,6 +1,8 @@
+import { NextAuthProvider } from "@/components/AuthProvider/AuthProvider";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import ThemeProvider from "@/components/ThemeProvider/ThemeProvider";
+import Toast from "@/components/Toast/Toast";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
@@ -25,13 +27,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} antialiased`}>
-        <ThemeProvider>
-          <main className="font-normal">
-            <Header />
-            {children}
-            <Footer />
-          </main>
-        </ThemeProvider>
+        <NextAuthProvider>
+          <ThemeProvider>
+            <Toast />
+            <main className="font-normal">
+              <Header />
+              {children}
+              <Footer />
+            </main>
+          </ThemeProvider>
+        </NextAuthProvider>
       </body>
     </html>
   );
