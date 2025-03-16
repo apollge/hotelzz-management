@@ -7,6 +7,7 @@
   --secondary: #f2c641;
   --tertiary-dark: #f27405;
   --tertiary-light: #f2c641;
+  --gray-500: #6b7280;
 }
 
 @theme inline {
@@ -16,6 +17,7 @@
   --color-secondary: var(--secondary);
   --color-tertiary-dark: var(--tertiary-dark);
   --color-tertiary-light: var(--tertiary-light);
+  --color-gray-500: var(--gray-500);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }

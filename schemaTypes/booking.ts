@@ -6,14 +6,14 @@ const booking = {
   type: "document",
   fields: [
     defineField({
-      name: "userId",
+      name: "user",
       title: "User",
       type: "reference",
       to: [{ type: "user" }],
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: "hotelRoomId",
+      name: "hotelRoom",
       title: "Hotel Room",
       type: "reference",
       to: [{ type: "hotelRoom" }],
@@ -21,19 +21,19 @@ const booking = {
     }),
     defineField({
       name: "checkinDate",
-      title: "Check In Date",
+      title: "Check-in Date",
       type: "date",
       validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: "checkoutDate",
-      title: "Check Out Date",
+      title: "Check-out Date",
       type: "date",
       validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: "numberOfDays",
-      title: "Number of Days",
+      title: "Number Of Days",
       type: "number",
       initialValue: 1,
       validation: (Rule) => Rule.required().min(1),
@@ -63,6 +63,7 @@ const booking = {
       name: "totalPrice",
       title: "Total Price",
       type: "number",
+      validation: (Rule) => Rule.required().min(0),
     }),
   ],
 };
