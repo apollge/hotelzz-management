@@ -3,9 +3,9 @@ import { NextResponse } from "next/server";
 
 export async function GET(
   req: Request,
-  { params }: { params: { id: string } }
-) {
-  const roomId = params.id;
+  { params }: { params: Promise<{ id: string }> }
+): Promise<Response> {
+  const { id: roomId } = await params;
 
   try {
     const roomReviews = await getRoomReviews(roomId);
