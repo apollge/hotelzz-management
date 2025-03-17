@@ -9,8 +9,7 @@ import {
 } from "@/libs/apis";
 import { authOptions } from "@/libs/auth";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export async function GET(req: Request, res: Response) {
+export async function GET(): Promise<Response> {
   const session = await getServerSession(authOptions);
 
   if (!session) {
@@ -28,8 +27,7 @@ export async function GET(req: Request, res: Response) {
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export async function POST(req: Request, res: Response) {
+export async function POST(req: Request): Promise<Response> {
   const session = await getServerSession(authOptions);
 
   if (!session) {

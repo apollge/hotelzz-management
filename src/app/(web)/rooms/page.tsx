@@ -24,7 +24,7 @@ const Rooms = () => {
     if (searchQuery) {
       setSearchQuery(searchQuery);
     }
-  }, []);
+  }, [searchParams]);
 
   async function fetchData() {
     return getRooms();
