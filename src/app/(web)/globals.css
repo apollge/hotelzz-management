@@ -4,6 +4,7 @@
   --background: #ffffff;
   --foreground: #171717;
   --primary: #038c7f;
+  --primary-dark: #026d64;
   --secondary: #f2c641;
   --tertiary-dark: #f27405;
   --tertiary-light: #f2c641;
@@ -14,6 +15,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
   --color-secondary: var(--secondary);
   --color-tertiary-dark: var(--tertiary-dark);
   --color-tertiary-light: var(--tertiary-light);
@@ -27,6 +29,7 @@
     --background: #0a0a0a;
     --foreground: #ededed;
     --primary: #038c7f;
+    --primary-dark: #026d64;
   }
 }
 
