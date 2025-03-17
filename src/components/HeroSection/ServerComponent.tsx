@@ -8,7 +8,7 @@ export const heading1 = (
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
     </p>
 
-    <button className="btn-primary">Get Started</button>
+    <button className="btn btn-primary">Get Started</button>
   </>
 );
 

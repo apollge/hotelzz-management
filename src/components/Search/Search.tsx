@@ -66,7 +66,7 @@ const Search = ({
         </div>
 
         <button
-          className="btn-primary"
+          className="btn btn-primary"
           type="button"
           onClick={handleFilterClick}
         >
