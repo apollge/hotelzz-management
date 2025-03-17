@@ -32,7 +32,6 @@ export async function POST(req: Request) {
       const session = event.data.object;
 
       const {
-        // @ts-ignore
         metadata: {
           adults,
           checkinDate,
@@ -44,7 +43,19 @@ export async function POST(req: Request) {
           discount,
           totalPrice,
         },
-      } = session;
+      } = session as Stripe.Checkout.Session & {
+        metadata: {
+          adults: string;
+          checkinDate: string;
+          checkoutDate: string;
+          children: string;
+          hotelRoom: string;
+          numberOfDays: string;
+          user: string;
+          discount: string;
+          totalPrice: string;
+        };
+      };
 
       await createBooking({
         adults: Number(adults),
